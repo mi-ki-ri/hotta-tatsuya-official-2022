@@ -1,9 +1,11 @@
 {{ define "main" }}
   <article>
-    <header>
+    <header class="flex justify-between items-stretch border-b">
       <h1>{{ .Title }}</h1>
-      <div>{{ .Date.Format "January 2, 2006" }}</div>
+      <div>{{ .Date.Format "2006-01-02" }}</div>
     </header>
-    <div>{{ .Content }}</div>
+    <div class="md:container md:mx-auto prose">
+      {{ .Content }}
+    </div>
   </article>
 {{ end }}
