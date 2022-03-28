@@ -1,12 +1,12 @@
 <header class="flex h-5/6 flex-row items-stretch justify-between sepia-0">
-  <h1 class="flex w-1/2 p-32 sm:p-1 flex-row items-stretch justify-between bg-black"
+  <h1 class="flex w-1/2 p-32 md:p-1 flex-row items-stretch justify-between bg-black"
     >
     <div class="flex w-full justify-center items-center bg-auto bg-no-repeat bg-cover bg-center sepia-[.33]" 
         style="background-image: url('{{ .Site.BaseURL }}/hottatatsuya.png')">
       <a class="flex text-white" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
     </div>
   </h1>
-  <nav class="flex w-1/2 p-32 sm:p-1 justify-center items-center bg-yellow-600 sepia-[.66]">
+  <nav class="flex w-1/2 p-32 md:p-1 justify-center items-center bg-yellow-600 sepia-[.66]">
     <ul class="flex w-full flex-col justify-start items-stretch">
       {{- range $termName, $entries := .Site.Taxonomies.categories }}
         <li class="p-1 m-1 rounded bg-gradient-to-br from-slate-400 to-slate-600">
