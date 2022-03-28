@@ -1,0 +1,26 @@
+<footer>
+    <section>
+      <address class="text-center">
+        hotta.tatsuya.songwriter@gmail.com
+      </address>
+    </section>
+    <section class="flex justify-around items-stretch">
+      <div
+        class="flex-1 p-1 border-r border-black">
+        <h2> カテゴリー </h2>
+        {{- range $termName, $entries := .Site.Taxonomies.categories }}
+        <a href="{{ "/categories/" | relLangURL }}{{ $termName | urlize
+                }}">{{ $termName | upper }}</a> ({{ $entries.Count }})
+            {{- end }}
+      </div>
+      <div class="flex-1 p-1">
+        <h2> タグ </h2>
+  
+        {{- range $termName, $entries := .Site.Taxonomies.tags }}
+        <a href="{{ "/tags/" | relLangURL }}{{ $termName | urlize
+                }}">{{ $termName | upper }}</a> ({{ $entries.Count }})
+            {{- end }}
+      </div>
+    </section>
+  
+  </footer>
