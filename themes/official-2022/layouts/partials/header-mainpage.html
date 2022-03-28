@@ -1,5 +1,5 @@
 <header class="flex h-5/6 flex-row items-stretch justify-between sepia-0">
-  <h1 class="flex w-1/2 p- md:p-32 flex-row items-stretch justify-between bg-black"
+  <h1 class="flex w-1/2 p-1 md:p-32 flex-row items-stretch justify-between bg-black"
     >
     <div class="flex w-full justify-center items-center bg-auto bg-no-repeat bg-cover bg-center sepia-[.33]" 
         style="background-image: url('{{ .Site.BaseURL }}/hottatatsuya.png')">
@@ -10,7 +10,7 @@
     <ul class="flex flex-wrap w-full flex-col justify-start items-stretch">
       {{- range $termName, $entries := .Site.Taxonomies.categories }}
         <li class="p-1 m-1 rounded bg-gradient-to-br from-slate-100 to-slate-200">
-          <a class="flex w-1/2 text-white" href="{{ "/categories/" | relLangURL }}{{ $termName | urlize }}">{{ $termName }}</a>
+          <a class="flex w-1/2" href="{{ "/categories/" | relLangURL }}{{ $termName | urlize }}">{{ $termName | upper }}</a>
         </li>
       {{- end }}
     </ul>
