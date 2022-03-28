@@ -6,7 +6,7 @@
       <a class="flex text-white text-2xl font-black" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
     </div>
   </h1>
-  <nav class="flex w-1/2 p-1 md:p-32 justify-center items-center bg-yellow-600 sepia-[.66]">
+  <nav class="flex w-1/2 p-1 md:p-32 justify-center items-center bg-gradient-to-br from-yellow-600 to-yellow-800	 sepia-[.66]">
     <ul class="flex flex-wrap w-full flex-col justify-start items-stretch">
       {{- range $termName, $entries := .Site.Taxonomies.categories }}
         <li class="p-1 m-1 rounded bg-gradient-to-br from-slate-100 to-slate-200">
