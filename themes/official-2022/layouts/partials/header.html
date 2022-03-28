@@ -1,4 +1,4 @@
-{{ if $.IsNode }} 
+{{ if and ($.IsNode) (eq $.Section "") }} 
   {{ partial "header-mainpage.html" . }}
 {{ else }}
   {{ partial "header-subpage.html" . }}
