@@ -1,7 +1,8 @@
 ---
 title: "First"
-date: 2022-03-28T16:29:07+09:00
-draft: false
+date: 2022-03-28
+tags: ["diary"]
+categories: ["diary"]
 ---
 
 test

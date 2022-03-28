@@ -1,6 +1,7 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
-draft: true
+title: "First"
+date: 2022-03-28
+tags: ["diary"]
+categories: ["diary"]
 ---
 

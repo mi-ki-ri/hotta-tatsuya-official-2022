@@ -7,11 +7,13 @@
     {{ partial "head.html" . }}
   </head>
   <body>
-    <h1>
-      <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-    </h1>
-    <div class="prose">
-      {{ block "main" . }}{{ end }}
+    <div class="h-screen">
+      {{ partial "header.html" . }}
+    
+      <div class="prose">
+        {{ block "main" . }}{{ end }}
+      </div>
     </div>
+    
   </body>
 </html>
