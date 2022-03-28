@@ -1,18 +1,5 @@
-<header class="flex h-5/6 flex-row items-stretch justify-between sepia-0">
-  <h1 class="flex w-1/2 p-16 flex-row items-stretch justify-between bg-black"
-    >
-    <div class="flex w-full justify-center items-center bg-auto bg-no-repeat bg-cover bg-center sepia-[.33]" 
-        style="background-image: url('{{ .Site.BaseURL }}/hottatatsuya.png')">
-      <a class="flex text-white" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-    </div>
-  </h1>
-  <nav class="flex w-1/2 p-16 justify-center items-center bg-yellow-600 sepia-[.66]">
-    <ul class="flex w-full flex-col justify-start items-stretch">
-      {{- range $termName, $entries := .Site.Taxonomies.categories }}
-        <li>
-          <a href="{{ "/categories/" | relLangURL }}{{ $termName | urlize }}">{{ $termName }}</a>
-        </li>
-      {{- end }}
-    </ul>
-  </nav>
-</header>
+{{ if $.IsNode }} 
+  {{ partial "header-mainpage.html" . }}
+{{ else }}
+  {{ partial "header-subpage.html" . }}
+{{ end }}

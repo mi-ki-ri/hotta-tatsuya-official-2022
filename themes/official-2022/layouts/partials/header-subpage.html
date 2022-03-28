@@ -1,0 +1,15 @@
+<header class="flex h-1/6 flex-row items-stretch justify-between sepia-0">
+  <h1 class="flex w-1/2 flex-row items-stretch justify-between bg-black"
+    >
+      <a class="flex text-white" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+  </h1>
+  <nav class="flex w-1/2 justify-center items-center bg-yellow-600 sepia-[.66]">
+    <ul class="flex w-full flex-col justify-start items-stretch">
+      {{- range $termName, $entries := .Site.Taxonomies.categories }}
+        <li>
+          <a href="{{ "/categories/" | relLangURL }}{{ $termName | urlize }}">{{ $termName }}</a>
+        </li>
+      {{- end }}
+    </ul>
+  </nav>
+</header>
