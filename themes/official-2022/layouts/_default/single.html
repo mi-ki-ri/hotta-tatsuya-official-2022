@@ -1,10 +1,10 @@
 {{ define "main" }}
-  <article>
+  <article class="sm:container sm:mx-auto ">
     <header class="flex justify-between items-stretch border-b">
-      <h1>{{ .Title }}</h1>
+      <h1 class="font-bold text-lg">{{ .Title }}</h1>
       <div>{{ .Date.Format "2006-01-02" }}</div>
     </header>
-    <div class="md:container md:mx-auto prose">
+    <div class="prose">
       {{ .Content }}
     </div>
   </article>
