@@ -12,9 +12,11 @@
                 </a>
                 <div>{{ .Date.Format "2006-01-02" }}</div>
               </header>
-              <div class="prose p-1 m-1">
-                {{ .Summary }}
-              </div>
+              <a href="{{ .Permalink }}">
+                <div class="prose p-1 m-1">
+                  {{ .Summary }}
+                </div>
+              </a>
           </li>
 
         {{ with $paginator.HasPrev }}
