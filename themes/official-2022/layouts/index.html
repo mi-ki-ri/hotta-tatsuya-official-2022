@@ -1,9 +1,32 @@
 {{ define "main" }}
-  <ul>
-    {{ range .Site.RegularPages }}
-      <li>
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-      </li>
-    {{ end }}
-  </ul>
+  <main class="sm:container sm:mx-auto ">
+    <ul>
+      {{ $paginator := .Paginate .Site.RegularPages 40 }} 
+      {{ with $paginator }} 
+      {{ range $paginator.Pages }}
+        <li>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+
+      {{ $burl := .Site.BaseURL }}
+      {{ with $paginator.HasPrev }}
+        <li>
+          <a class="text-center d-block fs-4" href="{{ $burl }}{{ $paginator.Prev.URL }}">
+            <strong>Prev</strong>
+          </a>
+        </li>
+      {{ end }}
+      {{ with $paginator.HasNext }}
+        <li>
+          <a class="text-center d-block fs-4" href="{{ $burl }}{{ $paginator.Next.URL }}">
+            <strong>Next</strong>
+          </a>
+        </li>
+        
+      {{ end }}
+      {{ end }}
+
+    </ul>
+  </main>
+  
 {{ end }}
