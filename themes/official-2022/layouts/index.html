@@ -1,6 +1,6 @@
 {{ define "main" }}
   <main class="sm:container sm:mx-auto ">
-    <ul class="flex w-full flex-row justify-around items-stretch">
+    <ul class="flex w-full flex-row justify-around items-stretch flex-wrap">
       {{ $burl := .Site.BaseURL }}
       {{ $paginator := .Paginate .Site.RegularPages 40 }} 
       {{ with $paginator }} 
