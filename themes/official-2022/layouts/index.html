@@ -4,36 +4,36 @@
       {{ $burl := .Site.BaseURL }}
       {{ $paginator := .Paginate .Site.RegularPages 40 }} 
       {{ with $paginator }} 
-      {{ range $paginator.Pages }}
-        <li class="flex w-5/12 border">
-            <header class="flex justify-start items-baseline border-b border-zinc-900 p-1 m-1">
-              <a href="{{ .Permalink }}">
-                <h1 class="font-bold text-lg">{{ .Title }}</h1>
-              </a>
-              <div>{{ .Date.Format "2006-01-02" }}</div>
-            </header>
-            <div class="prose p-1 m-1">
-              {{ .Content }}
-            </div>
-        </li>
+        {{ range $paginator.Pages }}
+          <li class="flex w-5/12 border">
+              <header class="flex justify-start items-baseline border-b border-zinc-900 p-1 m-1">
+                <a href="{{ .Permalink }}">
+                  <h1 class="font-bold text-lg">{{ .Title }}</h1>
+                </a>
+                <div>{{ .Date.Format "2006-01-02" }}</div>
+              </header>
+              <div class="prose p-1 m-1">
+                {{ .Content }}
+              </div>
+          </li>
 
-      {{ with $paginator.HasPrev }}
-        <li class="flex w-5/12 border">
-          <a href="{{ $burl }}{{ $paginator.Prev.URL }}">
-            <strong>Prev</strong>
-          </a>
-        </li>
+        {{ with $paginator.HasPrev }}
+          <li class="flex w-5/12 border">
+            <a href="{{ $burl }}{{ $paginator.Prev.URL }}">
+              <strong>Prev</strong>
+            </a>
+          </li>
+        {{ end }}
+        {{ with $paginator.HasNext }}
+          <li class="flex w-5/12 border">
+            <a href="{{ $burl }}{{ $paginator.Next.URL }}">
+              <strong>Next</strong>
+            </a>
+          </li>
+          
+        {{ end }}
+        {{ end }}
       {{ end }}
-      {{ with $paginator.HasNext }}
-        <li class="flex w-5/12 border">
-          <a href="{{ $burl }}{{ $paginator.Next.URL }}">
-            <strong>Next</strong>
-          </a>
-        </li>
-        
-      {{ end }}
-      {{ end }}
-
     </ul>
   </main>
   
