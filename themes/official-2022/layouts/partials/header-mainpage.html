@@ -10,7 +10,7 @@
     <ul class="flex flex-wrap w-full flex-row justify-start items-stretch">
       {{- range $termName, $entries := .Site.Taxonomies.categories }}
         <li class="p-1 m-1 w-5/12 rounded bg-gradient-to-br from-slate-100 to-slate-200">
-          <a class="flex w-5/12 text-lg font-bold text-center" href="{{ "/categories/" | relLangURL }}{{ $termName | urlize }}">{{ $termName | upper }}</a>
+          <a class="flex w-5/12 text-lg font-bold text-center text-ellipsis	" href="{{ "/categories/" | relLangURL }}{{ $termName | urlize }}">{{ $termName | upper }}</a>
         </li>
       {{- end }}
     </ul>
