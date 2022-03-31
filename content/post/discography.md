@@ -2,7 +2,7 @@
 title: "Discography"
 date: 2022-03-28
 tags: ["static", "info"]
-categories: ["discography"]
+categories: ["static"]
 ---
 
 ## ダーカー・ザン・ブルー (2022.01.18)
