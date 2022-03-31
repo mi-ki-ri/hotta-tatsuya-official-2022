@@ -2,7 +2,7 @@
 title: "CONTACT"
 date: 2022-03-28
 tags: ["static", "info"]
-categories: ["static"]
+categories: ["info"]
 ---
 
 このサイトの下部にもありますが、連絡は
